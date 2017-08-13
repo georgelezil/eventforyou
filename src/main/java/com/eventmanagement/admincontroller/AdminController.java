@@ -36,6 +36,7 @@ public class AdminController {
 
 	@PostMapping(value = "/listallevent")
 	public String retrieveAllEvent(ModelMap theModel) {
+		//Add the comments
 		List<EventDTO> eventlst = eventService.retrieveAllEvent();
 		theModel.addAttribute("eventlist", eventlst);
 		return "viewalleventpage";
